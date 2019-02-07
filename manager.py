@@ -11,6 +11,7 @@ class Manager(object):
     def AddItems(self):
         # This will add items and append it to my .txt file.
         target = open("todos.txt", 'a')
+        # This allows me to add an input to my list. It also says add a task to prompt you to type.
         add = target.write(input("""Add a Task
 >""")+ "\n")
         # This will just add information to the end of the file.
