@@ -16,16 +16,41 @@ class Manager(object):
 >""")+ "\n")
         # This will just add information to the end of the file.
         target.close()
+
+        def Changed():
+        lists = open("todos.txt", "r+")
+        reading = lists.read()
+        delete_line = input('Hello fam!? ')
+        if delete_line == '':
+            lists.close()
+            return start()
+        else:
+            item.Item.get_rid(change_line)
+            lists.close()
+            return start()
   # Creating a function that takes arguments.
 
 #I wanted to be able to choose what to do when you first run the file.
-# def start():
-    # print("1. View todo list")
-    # print("2. Add to the todo list")
-    # print("3. Change todo state")
-    # print("4. Quit")
+ def start():
+     print("1. View todo list")
+     print("2. Add to the todo list")
+     print("3. Change todo state")
+     print("4. Quit")
 
-    #  beginning = input('-> ')
+      beginning = input('-> ')
+
+    if beginning == '1':
+        return Manager.PrintList()
+    elif beginning == '2':
+        return Manager.AddItems()
+    elif beginning == '3':
+        return Manager.Changed()
+    elif beginning == '4':
+        print('Have a nice day!')
+        exit(0)
+    else:
+        print('What was that?')
+        return start(
 
 
 add = Manager()
